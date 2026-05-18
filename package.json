@@ -2,11 +2,10 @@
   "name": "@mfe-vr/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {
+"scripts": {
     "build:remotes": "nx run-many --target=build --projects=header,cards,footer",
-    "preview:remotes": "nx run-many --target=preview --projects=header,cards,footer --parallel",
-    "start:host": "nx serve host",
-    "dev": "npm run build:remotes && npm run preview:remotes & npm run start:host"
+    "preview:remotes": "nx run-many --target=preview --projects=header,cards,footer --parallel=3",
+    "start:host": "nx serve host"
   },
   "private": true,
   "devDependencies": {

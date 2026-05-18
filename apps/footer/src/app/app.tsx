@@ -1,12 +1,19 @@
-// Uncomment this line to use CSS modules
-// import styles from './app.module.css';
-import NxWelcome from './nx-welcome';
+import vrLogo from '../assets/vr_logo.png';
+import styles from './app.module.css';
 
 export function App() {
   return (
-    <div>
-      <NxWelcome title="footer" />
+    <>
+    <hr className={styles.divisor} />
+    <div className={styles.footer}>
+      <img
+        src={vrLogo}
+        className={styles.logo}
+        alt="VR logo"
+      />
+      <p className={styles.textoFooter}>© 2026 VR Benefícios - Todos os direitos reservados  </p>
     </div>
+    </>
   );
 }
 
