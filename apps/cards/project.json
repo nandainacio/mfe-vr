@@ -1,0 +1,15 @@
+{
+  "name": "cards",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/cards/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "preview": {
+      "command": "vite preview --port 4202 --strictPort --host localhost",
+      "options": {
+        "cwd": "apps/cards"
+      }
+    }
+  }
+}
