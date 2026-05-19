@@ -5,7 +5,9 @@
   "scripts": {
     "build:remotes": "nx run-many --target=build --projects=header,cards,footer",
     "preview:remotes": "nx run-many --target=preview --projects=header,cards,footer --parallel=3",
-    "start:host": "nx serve host"
+    "start:host": "nx serve host",
+    "test": "nx run-many --target=test --all",
+    "test:coverage": "nx run-many --target=test --projects=cards,header,footer,host --parallel -- --coverage"
   },
   "private": true,
   "devDependencies": {
@@ -24,7 +26,9 @@
     "@swc/core": "~1.15.5",
     "@swc/helpers": "~0.5.18",
     "@testing-library/dom": "10.4.0",
-    "@testing-library/react": "16.3.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
     "@types/node": "20.19.9",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",

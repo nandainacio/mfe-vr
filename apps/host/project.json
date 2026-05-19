@@ -5,5 +5,12 @@
   "projectType": "application",
   "tags": [],
   "// targets": "to see all targets run: nx show project host --web",
-  "targets": {}
+  "targets": {
+    "test": {
+      "command": "vitest run --environment jsdom",
+      "options": {
+        "cwd": "apps/host"
+      }
+    }
+  }
 }

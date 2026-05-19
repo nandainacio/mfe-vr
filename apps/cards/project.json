@@ -5,8 +5,26 @@
   "projectType": "application",
   "tags": [],
   "targets": {
+    "serve": {
+      "command": "vite --port 4202 --strictPort --host localhost",
+      "options": {
+        "cwd": "apps/cards"
+      }
+    },
+    "build": {
+      "command": "vite build",
+      "options": {
+        "cwd": "apps/cards"
+      }
+    },
     "preview": {
       "command": "vite preview --port 4202 --strictPort --host localhost",
+      "options": {
+        "cwd": "apps/cards"
+      }
+    },
+    "test": {
+      "command": "vitest run --environment jsdom",
       "options": {
         "cwd": "apps/cards"
       }

@@ -1,17 +1,22 @@
-import { render } from '@testing-library/react';
+import { render, screen, cleanup } from '@testing-library/react';
+import { describe, it, expect, afterEach } from 'vitest';
 
-import App from './app';
+afterEach(() => cleanup());
 
-describe('App', () => {
-  it('should render successfully', () => {
-    const { baseElement } = render(<App />);
-    expect(baseElement).toBeTruthy();
+import { App } from './app';
+
+describe('Footer Component (App)', () => {
+  it('renders logo and text', () => {
+    render(<App />);
+    expect(screen.getByText(/© 2026 VR Benefícios/i)).toBeTruthy();
+    const img = screen.getByAltText(/vr logo/i);
+    expect(img).toBeTruthy();
   });
-
-  it('should have a greeting as the title', () => {
-    const { getAllByText } = render(<App />);
-    expect(
-      getAllByText(new RegExp('Welcome footer', 'gi')).length > 0,
-    ).toBeTruthy();
+  
+  it('contains an hr separator', () => {
+    render(<App />);
+    const separador = screen.getByRole('separator');
+    expect(separador).toBeTruthy();
   });
 });
+
