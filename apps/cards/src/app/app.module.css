@@ -5,11 +5,9 @@
     margin-top: 50px;
     justify-content: center;
     justify-items: center;
-    margin-left: auto;
-    margin-right: auto;
     max-width: 1240px;
     padding: 0 20px;
-
+    margin: 100px auto 20px auto;
    
 
 }
@@ -62,4 +60,75 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     padding: 10px;
+}
+
+/* Responsive: tablet and mobile */
+@media (max-width: 1024px) {
+    .gridProdutos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        padding: 0 16px;
+        margin: 80px auto 16px auto;
+        max-width: 900px;
+    }
+
+    .card {
+        max-width: 320px;
+        min-height: 360px;
+        padding: 12px;
+    }
+
+    .fotoProduto {
+        width: 100%;
+        max-width: 300px;
+        height: 160px;
+    }
+
+    .preco {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gridProdutos {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 0 12px;
+        margin: 60px auto 12px auto;
+        max-width: 480px;
+    }
+
+    .card {
+        max-width: 100%;
+        min-height: auto;
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+    .fotoProduto {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: cover;
+    }
+
+    .descricao {
+        font-size: 13px;
+    }
+
+    .preco {
+        font-size: 16px;
+    }
+
+    .footerCard {
+        flex-direction: column;
+        gap: 8px;
+        align-items: stretch;
+    }
+
+    .botaoComprar {
+        width: 100%;
+        padding: 10px 12px;
+        font-size: 13px;
+    }
 }

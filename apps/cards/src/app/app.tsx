@@ -10,7 +10,11 @@ interface Produto {
   images: string[];
 }
 
-export function App() {
+interface CardsProps {
+  adicionarAoCarrinho?: (produto: any) => void;
+}
+
+export function App({ adicionarAoCarrinho }: CardsProps) {
   const [produtos, setProdutos] = useState<Produto[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -47,7 +51,14 @@ export function App() {
               <span className={styles.preco}>
                 {produto.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
               </span>
-              <button className={styles.botaoComprar}>COMPRAS</button>
+              
+              <button 
+                className={styles.botaoComprar}
+                onClick={() => adicionarAoCarrinho && adicionarAoCarrinho(produto)}
+              >
+                COMPRAS
+              </button>
+
             </div>
           </div>
         ))}

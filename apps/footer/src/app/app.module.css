@@ -23,3 +23,40 @@
     border-top: #E4E8ED 1px solid;
     margin-top: 20px;
 }
+
+/* Responsive footer */
+@media (max-width: 1024px) {
+    .footer{
+        margin-left: 24px;
+        gap: 12px;
+    }
+
+    .logo{
+        width: 44px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
+        gap: 8px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    .textoFooter{
+        font-size: 11px;
+    }
+
+    .logo{
+        width: 40px;
+    }
+
+    .divisor{
+        margin-top: 12px;
+        width: 100%;
+    }
+}
