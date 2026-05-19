@@ -2,7 +2,7 @@
   "name": "@mfe-vr/source",
   "version": "0.0.0",
   "license": "MIT",
-"scripts": {
+  "scripts": {
     "build:remotes": "nx run-many --target=build --projects=header,cards,footer",
     "preview:remotes": "nx run-many --target=preview --projects=header,cards,footer --parallel=3",
     "start:host": "nx serve host"
@@ -47,6 +47,7 @@
     "vitest": "~4.1.0"
   },
   "dependencies": {
+    "axios": "^1.16.1",
     "lucide-react": "^1.16.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
