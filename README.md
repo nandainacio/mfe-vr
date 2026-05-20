@@ -55,7 +55,7 @@ Siga o passo a passo abaixo para rodar o ecossistema completo em sua máquina:
 ### 1. Clonar o repositório e instalar as dependências
 ```bash
 # Clone o repositório
-git clone
+git clone https://github.com/nandainacio/mfe-vr.git
 
 
 # Instale todas as dependências do monorepo
@@ -63,13 +63,13 @@ npm install
 
 # Executar as aplicações
 
-Build das aplicações Header, Cards e Footer:
+1 - Build das aplicações Header, Cards e Footer:
 npm run build:remotes 
 
-Executar as aplicações Header, Cards e Footer:
+2 - Executar as aplicações Header, Cards e Footer:
 npm run preview:remotes
 
-Executar o Host:
+3 - Executar o Host:
 npm run start:host
 
 
